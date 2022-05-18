@@ -130,7 +130,7 @@ El middleware **randomPlay** debe buscar un quiz al azar en la base de datos, y 
 
 La respuesta HTTP que se envía al cliente se construye usando el método **res.render**. Toma como primer parámetro el path relativo de un fichero EJS situado dentro de la carpeta **views**, que en este caso será **"quizzes/random\_play"**. Como segundo parámetro debe pasarse el objeto quiz sacado de la base de datos. 
 
-El fichero **views/quizzes/random\_play.ejs** ya se proporciona hecho. El alumno debe usar este fichero sin modificarlo.
+El fichero **views/quizzes/random\_play.ejs** ya se proporciona hecho en un zip en este proyecto. El alumno debe usar este fichero sin modificarlo poniéndolo en la ruta correcta (**views/quizzes/random\_play.ejs**).
 
 El middleware **randomPlay** no solo debe mostrar la pregunta del primer quiz del juego, sino todas las demás preguntas del juego, una detrás de otra, y renderizarlas siempre con la misma vista.  
 Cuando el cliente haya respondido bien a todas las preguntas de la base de datos, el middleware **randomPlay** debe responder renderizando la vista **quizzes/random\_nomore.ejs**, que muestra una página informando de que el juego ha finalizado con éxito. 
@@ -192,7 +192,7 @@ Si la respuesta es incorrecta, entonces el juego debe terminar. El middleware de
 
 ### Tarea 5 - Las vistas
 
-Para realizar esta práctica deben usarse los 3 ficheros de vistas siguientes sin modificarlos. Estos ficheros se proporcionan en un ZIP después de este enunciado.
+Para realizar esta práctica deben usarse los 3 ficheros de vistas siguientes sin modificarlos. Estos ficheros se proporcionan en un ZIP en el raiz de este mismo proyecto.
 
 La vista **views/quizzes/random\_play.ejs** muestra la pregunta de un quiz y un formulario para que el usuario responda:
 
