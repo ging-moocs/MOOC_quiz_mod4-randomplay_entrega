@@ -35,7 +35,7 @@ const TIMEOUT =  typeof process.env.TIMEOUT !== "undefined"?parseInt(process.env
 const COOLDOWN =  typeof process.env.COOLDOWN !== "undefined"?parseInt(process.env.COOLDOWN):0;
 
 
-const path_assignment = path.resolve(path.join(__dirname, "../", "quiz_2020"));
+const path_assignment = path.resolve(path.join(__dirname, "../../", "quiz_2020"));
 const URL = `file://${path_assignment.replace("%", "%25")}`;
 const browser = new Browser({"waitDuration": WAIT, "silent": true, "runScripts": false});
 
@@ -189,7 +189,7 @@ describe("Funcionales", function(){
                 
             }
 
-            browser.site = `http://localhost:${TEST_PORT}/`;
+            browser.site = `http://127.0.0.1:${TEST_PORT}/`;
             await browser.visit("/");
             browser.assert.status(200);
 
