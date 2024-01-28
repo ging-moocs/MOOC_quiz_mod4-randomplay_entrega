@@ -3,8 +3,10 @@
 <img  align="right" width="150" style="float: right;" src="https://miriadax.net/miriadax-theme/images/custom/logo_miriadax_new.svg">
 
 <br/><br/><br/>
-Módulo 4: Recurso usuarios, Autenticación, Autorización y Registro, Autores de Preguntas y Mis Preguntas
-Versión: 19 de Junio de 2020
+
+# Módulo 4: Recurso usuarios, Autenticación, Autorización y Registro, Autores de Preguntas y Mis Preguntas
+
+Versión: 19 de Enero de 2024
 
 ## Objetivos
 
@@ -132,8 +134,8 @@ La respuesta HTTP que se envía al cliente se construye usando el método **res.
 
 El fichero **views/quizzes/random\_play.ejs** ya se proporciona hecho en un zip en este proyecto. El alumno debe usar este fichero sin modificarlo poniéndolo en la ruta correcta (**views/quizzes/random\_play.ejs**).
 
-El middleware **randomPlay** no solo debe mostrar la pregunta del primer quiz del juego, sino todas las demás preguntas del juego, una detrás de otra, y renderizarlas siempre con la misma vista.  
-Cuando el cliente haya respondido bien a todas las preguntas de la base de datos, el middleware **randomPlay** debe responder renderizando la vista **quizzes/random\_nomore.ejs**, que muestra una página informando de que el juego ha finalizado con éxito. 
+El middleware **randomPlay** no solo debe mostrar la pregunta del primer quiz del juego, sino todas las demás preguntas del juego, una detrás de otra, y renderizarlas siempre con la misma vista. 
+Cuando el cliente haya respondido bien a todas las preguntas de la base de datos, el middleware **randomPlay** debe responder renderizando la vista **quizzes/random\_nomore.ejs**, que muestra una página informando de que el juego ha finalizado con éxito.
 El juego **Random Play** no debe repetir la misma pregunta durante una partida. Debe mostrar siempre un quiz diferente, hasta que no quede ningún quiz nuevo que mostrar. Para no repetir las preguntas es necesario guardar los identificadores de los quizzes ya contestados en algún lugar.
 
 HTTP es un protocolo transaccional que no guarda información de los clientes entre transacciones. El alumno debe utilizar la sesión (**req.session**) para guardar un array con los identificadores de los quizzes ya respondidos. Como cada cliente tiene una sesión diferente, varios clientes podrán jugar simultáneamente sin interferir entre si.
