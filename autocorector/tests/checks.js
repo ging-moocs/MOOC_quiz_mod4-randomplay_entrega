@@ -7,7 +7,8 @@ const spawn = require("child_process").spawn;
 const fs = require("fs");
 
 const process = require("process")
-var Git = require("nodegit");
+//quitado porque da problemas en node 18
+//var Git = require("nodegit");
 
 
 // CRITICAL ERRORS
@@ -133,6 +134,7 @@ describe("Prechecks", function () {
            fileexists.should.be.equal(true);
        });
 
+       /* comento para poder quitar nodegit que da problemas en node 18
     it("1: Comprobando que existe la rama randomplay",
        0,
        async function () {
@@ -140,6 +142,7 @@ describe("Prechecks", function () {
            repo = await Git.Repository.open(path_assignment);
            commit = await repo.getBranchCommit("randomplay")
        });
+       */
 });
 
 
